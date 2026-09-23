@@ -1,25 +1,21 @@
-import NetworkCanvas from './components/NetworkCanvas';
+import SubtleBackground from './components/SubtleBackground';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
-import Capabilities from './components/Capabilities';
+import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Clients from './components/Clients';
 import Impact from './components/Impact';
-import NetworkOps from './components/NetworkOps';
-import ProblemSolving from './components/ProblemSolving';
+import Approach from './components/Approach';
 import Certifications from './components/Certifications';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="relative min-h-screen bg-[#05070A] text-gray-200 overflow-x-hidden">
-      {/* Animated Network Background */}
-      <NetworkCanvas />
-      
-      {/* Grid overlay */}
-      <div className="fixed inset-0 grid-bg pointer-events-none z-0" />
+    <div className="relative min-h-screen bg-[#0B1220] text-[#F5F7FA] overflow-x-hidden">
+      {/* Subtle Background */}
+      <SubtleBackground />
       
       {/* Navigation */}
       <Navbar />
@@ -32,7 +28,7 @@ function App() {
         <About />
         
         <div className="section-divider" />
-        <Capabilities />
+        <Skills />
         
         <div className="section-divider" />
         <Experience />
@@ -44,10 +40,7 @@ function App() {
         <Impact />
         
         <div className="section-divider" />
-        <NetworkOps />
-        
-        <div className="section-divider" />
-        <ProblemSolving />
+        <Approach />
         
         <div className="section-divider" />
         <Certifications />

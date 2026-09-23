@@ -1,76 +1,50 @@
 import { motion, useInView } from 'framer-motion';
-import { useRef, useEffect, useState } from 'react';
+import { useRef } from 'react';
 
 const metrics = [
-  { value: 40, suffix: '%', label: 'REDUCTION IN REPEAT INCIDENTS' },
-  { value: 30, suffix: '%', label: 'FASTER CROSS-TEAM RESOLUTION' },
-  { value: 50, suffix: '+', label: 'MULTI-SITE LOCATIONS' },
-  { value: 6, suffix: '+', label: 'GLOBAL CLIENTS' },
-  { value: 0, suffix: '', label: 'MAJOR SLA BREACHES' },
+  { value: '40%', label: 'REDUCTION IN REPEAT INCIDENTS' },
+  { value: '30%', label: 'IMPROVED CROSS-TEAM RESOLUTION' },
+  { value: '50+', label: 'ENTERPRISE LOCATIONS' },
+  { value: '6+', label: 'GLOBAL CLIENTS' },
+  { value: '0', label: 'MAJOR SLA BREACHES' },
 ];
-
-function AnimatedCounter({ target, suffix, isInView }: { target: number; suffix: string; isInView: boolean }) {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    if (!isInView) return;
-    let start = 0;
-    const end = target;
-    const duration = 2000;
-    const increment = end / (duration / 16);
-    
-    const timer = setInterval(() => {
-      start += increment;
-      if (start >= end) {
-        setCount(end);
-        clearInterval(timer);
-      } else {
-        setCount(Math.floor(start));
-      }
-    }, 16);
-
-    return () => clearInterval(timer);
-  }, [isInView, target]);
-
-  return (
-    <span className="counter-glow">
-      {count}{suffix}
-    </span>
-  );
-}
 
 export default function Impact() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section id="impact" className="relative py-24 lg:py-32 px-4">
+    <section className="relative py-24 lg:py-32 px-6 lg:px-8">
       <div className="max-w-7xl mx-auto" ref={ref}>
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-4">NETWORK IMPACT</h2>
-          <p className="text-gray-500 text-sm tracking-widest uppercase">Measurable Results</p>
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="w-8 h-px bg-[#3B82F6]" />
+            <span className="text-[#3B82F6] text-xs font-semibold tracking-[0.2em] uppercase">Results</span>
+            <div className="w-8 h-px bg-[#3B82F6]" />
+          </div>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white">NETWORK IMPACT</h2>
         </motion.div>
 
         {/* Metrics Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
           {metrics.map((metric, i) => (
             <motion.div
               key={metric.label}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="text-center p-6 rounded-xl border border-[#1E293B]/50 bg-[#0D141B]/50"
+              transition={{ duration: 0.4, delay: i * 0.1 }}
+              className="text-center p-6 rounded-xl border border-[#1E293B]/50 bg-[#151F2E]"
             >
-              <div className="text-3xl sm:text-4xl lg:text-5xl font-black mb-3">
-                <AnimatedCounter target={metric.value} suffix={metric.suffix} isInView={isInView} />
+              <div className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#3B82F6] mb-3">
+                {metric.value}
               </div>
-              <p className="text-[10px] sm:text-xs text-gray-500 font-medium tracking-wider leading-relaxed">
+              <p className="text-[10px] sm:text-xs text-[#A8B3C2] font-medium tracking-wider leading-relaxed">
                 {metric.label}
               </p>
             </motion.div>
