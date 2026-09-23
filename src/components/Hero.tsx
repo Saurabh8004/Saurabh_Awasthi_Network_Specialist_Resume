@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Download, ExternalLink } from 'lucide-react';
 
-const PROFILE_IMAGE = '/profile.jpg';
+const PROFILE_IMAGE = '/profile.png';
 
 const stats = [
   { value: '4+', label: 'YEARS EXPERIENCE' },
