@@ -141,7 +141,7 @@ export default function Experience() {
             </div>
           </div>
           <p className="text-[#A8B3C2] text-sm sm:text-base leading-relaxed mt-4 max-w-4xl">
-            Working in a <span className="text-white font-medium">24×7 Global Network Operations Center</span> supporting multiple global enterprise environments across routing, switching, wireless, firewall, VPN, SD-WAN and network infrastructure operations.
+            Worked as a Network Specialist / NOC Engineer within HCL Technologies' <span className="text-white font-medium">24×7 Global Network Operations Center (GNOC)</span>, supporting a shared enterprise network environment for multiple global clients. The role involved managing and troubleshooting diverse network infrastructure across routing, switching, wireless, firewalls, VPN and SD-WAN, while handling network incidents, configuration changes, infrastructure upgrades, monitoring and service restoration across different client environments.
           </p>
         </motion.div>
 
