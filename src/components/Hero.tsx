@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Download, ExternalLink } from 'lucide-react';
 
-const PROFILE_IMAGE = 'https://image.qwenlm.ai/generated-images/aab3ef18-865c-46c1-82f6-9a37600dba4f/_result.png';
+const PROFILE_IMAGE = '/profile.jpg';
 
 const stats = [
   { value: '4+', label: 'YEARS EXPERIENCE' },
