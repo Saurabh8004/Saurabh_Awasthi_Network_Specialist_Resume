@@ -71,13 +71,15 @@ export default function Hero() {
               >
                 VIEW EXPERIENCE
               </a>
+              
               <a
-                href="#contact"
-                className="px-7 py-3 border border-[#3B82F6]/40 text-[#3B82F6] font-semibold text-sm rounded btn-outline flex items-center gap-2"
-              >
-                <Download size={14} />
-                DOWNLOAD RESUME
-              </a>
+  href="/Saurabh_Awasthi_Resume.pdf"
+  download="Saurabh_Awasthi_Resume.pdf"
+  className="px-7 py-3 border border-[#3B82F6]/40 text-[#3B82F6] font-semibold text-sm rounded btn-outline flex items-center gap-2"
+>
+  <Download size={14} />
+  DOWNLOAD RESUME
+</a>
             </div>
 
             {/* LinkedIn */}
