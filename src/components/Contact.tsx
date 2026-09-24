@@ -81,12 +81,13 @@ export default function Contact() {
               LINKEDIN
             </a>
             <a
-              href="#home"
-              className="w-full sm:w-auto px-7 py-3 border border-[#1E293B] text-[#A8B3C2] font-semibold text-sm rounded btn-outline flex items-center justify-center gap-2"
-            >
-              <Download size={14} />
-              RESUME
-            </a>
+  href="/Saurabh_Awasthi_Resume.pdf"
+  download="Saurabh_Awasthi_Resume.pdf"
+  className="w-full sm:w-auto px-7 py-3 border border-[#1E293B] text-[#A8B3C2] font-semibold text-sm rounded btn-outline flex items-center justify-center gap-2"
+>
+  <Download size={14} />
+  RESUME
+</a>
           </div>
         </motion.div>
       </div>
